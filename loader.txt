@@ -202,11 +202,11 @@ Submit.MouseButton1Click:Connect(function()
             elseif game.PlaceId == keyboardId or game.GameId == keyboardId then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/kyruxv1/KYO-SCRIPTS-FULL/refs/heads/main/%2B1%20speed%20keyboard%20escape.txt"))()
 
-elseif game.PlaceId == SellId or game.GameId == SellId then
+              elseif game.PlaceId == SellId or game.GameId == SellId then
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/kyruxv1/kyo-scripts/refs/heads/main/Sell-lemons.txt"))()
 
-if game.PlaceId == nightsinId or game.GameId == nightsinId then
+               if game.PlaceId == nightsinId or game.GameId == nightsinId then
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/kyruxv1/KYO-SCRIPTS-FULL/refs/heads/main/99NightsInTheForest.txt"))()
 
