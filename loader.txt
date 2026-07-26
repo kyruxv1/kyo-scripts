@@ -163,7 +163,8 @@ local nights99Id = 79546208627805
 local gag2PlaceId = 77085202503540
 local gag2GameId = 10200395747
 local keyboardId = 95082159892680
-local Sell = 79268393072444
+local SellId = 79268393072444
+local nightsinId = 126509999114328
 
 -- Submit Logic
 Submit.MouseButton1Click:Connect(function()
@@ -201,9 +202,13 @@ Submit.MouseButton1Click:Connect(function()
             elseif game.PlaceId == keyboardId or game.GameId == keyboardId then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/kyruxv1/KYO-SCRIPTS-FULL/refs/heads/main/%2B1%20speed%20keyboard%20escape.txt"))()
 
-elseif game.PlaceId == SellPlaceId or game.GameId == Sell2GameId then
+elseif game.PlaceId == SellId or game.GameId == SellId then
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/kyruxv1/kyo-scripts/refs/heads/main/Sell-lemons.txt"))()
+
+if game.PlaceId == nightsinId or game.GameId == nightsinId then
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/kyruxv1/KYO-SCRIPTS-FULL/refs/heads/main/99NightsInTheForest.txt"))()
 
             else
                 -- DEBUG KICK MESSAGE: Left this in case you need to get the IDs for the other two games
