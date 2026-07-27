@@ -1,0 +1,25 @@
+local HttpService = game:GetService("HttpService")
+
+-- Your API key from the Keys page. Script name is tied to the key automatically.
+local SCRIPTHUB_API_KEY = "sh_450c76ed99230b5f5b715afebb1918084bedf5c1"
+local SCRIPTHUB_ENDPOINT = "https://script-hub-analytics--lolahmedlolmam1.replit.app/api/executions"
+
+local function trackExecution()
+    local success, err = pcall(function()
+        local data = HttpService:JSONEncode({
+            player_name = game.Players.LocalPlayer.Name,
+            player_id = tostring(game.Players.LocalPlayer.UserId),
+            game_name = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+            game_id = tostring(game.PlaceId),
+        })
+        HttpService:PostAsync(SCRIPTHUB_ENDPOINT, data, Enum.HttpContentType.ApplicationJson, false, {
+            ["x-api-key"] = SCRIPTHUB_API_KEY
+        })
+    end)
+    if not success then
+        warn("[ScriptHub] Failed to track execution: " .. tostring(err))
+    end
+end
+
+-- Call this when your script loads
+trackExecution()
